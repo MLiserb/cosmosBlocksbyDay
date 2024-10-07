@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cosmos Blocks Chart</title>
+    <style>
+      #app {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      .controls {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      input[type="date"] {
+        padding: 5px;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .scale-toggle {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Cosmos Blocks per Day</h1>
+      <div class="controls">
+        <div>
+          <label for="startDate">Start Date:</label>
+          <input type="date" id="startDate">
+        </div>
+        <div>
+          <label for="endDate">End Date:</label>
+          <input type="date" id="endDate">
+        </div>
+        <button id="reloadButton">Reload Data</button>
+      </div>
+      <div class="scale-toggle">
+        <label>
+          <input type="checkbox" id="logScale"> Use Logarithmic Scale
+        </label>
+      </div>
+      <canvas id="myChart" width="800" height="400"></canvas>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
